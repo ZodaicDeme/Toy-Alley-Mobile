@@ -1,0 +1,415 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+          leading: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          title: const Text ("     Shopping Cart",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontFamily: 'modern_sans_serif_7'
+              )
+          ),
+        ),
+        body: Center(
+          child: Column(
+              children: [
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      padding: const EdgeInsets.only(
+                        left: 14, right: 14, top: 15, bottom: 15,),
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(254, 80, 69, 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Icon(Icons.check_box_outline_blank, color: Colors.white),
+                              Text(
+                                "    ",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Arial',
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Column(
+                                children: const [
+                                  Image(
+                                    image: AssetImage("images/Beyblade1.png"),
+                                    height: 75,
+                                    width: 75,
+                                  ),
+                                ],
+                              ),
+
+                              Column(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    padding: const EdgeInsets.only(
+                                      left: 20,
+                                      right: 30,
+                                      top: 5,
+                                      bottom: 15,),
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(254, 80, 69, 1),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Column(
+                                      children: const [
+                                        Text("Beyblade         ",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'Arial',
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 5),
+                                        Text(
+                                          "P1799                    ",
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontFamily: 'Arial',
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    padding: const EdgeInsets.only(
+                                      left: 5, right: 5, top: 5, bottom: 5,),
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(
+                                          241, 229, 229, 1.0),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Column(
+                                            children:  [
+                                              Text(
+                                                " + ",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Arial',
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                              Positioned(
+                                                // line1cEs (1:259)
+                                                left:  13,
+                                                top:  120.9830474854,
+                                                child:
+                                                Align(
+                                                  child:
+                                                  SizedBox(
+                                                    width:  20,
+                                                    height:  2,
+                                                    child: Container(
+                                                      decoration:  BoxDecoration (
+                                                        color: Color.fromRGBO(
+                                                            72, 71, 71,
+                                                            0.5686274509803921),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                " 1 ",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Arial',
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                              Positioned(
+                                                // line1cEs (1:259)
+                                                left:  13,
+                                                top:  120.9830474854,
+                                                child:
+                                                Align(
+                                                  child:
+                                                  SizedBox(
+                                                    width:  20,
+                                                    height:  2,
+                                                    child: Container(
+                                                      decoration:  BoxDecoration (
+                                                        color: Color.fromRGBO(
+                                                            72, 71, 71,
+                                                            0.5686274509803921),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                " - ",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Arial',
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                            ]
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 24),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      padding: const EdgeInsets.only(
+                        left: 14, right: 14, top: 15, bottom: 15,),
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(254, 80, 69, 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Icon(Icons.check_box_outline_blank, color: Colors.white),
+                              Column(
+                                children: const [
+                                  Image(
+                                    image: AssetImage("images/Luffy1.png"),
+                                    height: 75,
+                                    width: 75,
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    padding: const EdgeInsets.only(
+                                      left: 20,
+                                      right: 30,
+                                      top: 5,
+                                      bottom: 15,),
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(254, 80, 69, 1),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Column(
+                                      children: const [
+                                        Text("Luffy Figure         ",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'Arial',
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 5),
+                                        Text(
+                                          "P1799                          ",
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontFamily: 'Arial',
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    padding: const EdgeInsets.only(
+                                      left: 5, right: 5, top: 5, bottom: 5,),
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(
+                                          241, 229, 229, 1.0),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Column(
+                                            children:  [
+                                              Text(
+                                                " + ",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Arial',
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                              Positioned(
+                                                // line1cEs (1:259)
+                                                left:  13,
+                                                top:  120.9830474854,
+                                                child:
+                                                Align(
+                                                  child:
+                                                  SizedBox(
+                                                    width:  20,
+                                                    height:  2,
+                                                    child: Container(
+                                                      decoration:  BoxDecoration (
+                                                        color: Color.fromRGBO(
+                                                            72, 71, 71,
+                                                            0.5686274509803921),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                " 1 ",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Arial',
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                              Positioned(
+                                                // line1cEs (1:259)
+                                                left:  13,
+                                                top:  120.9830474854,
+                                                child:
+                                                Align(
+                                                  child:
+                                                  SizedBox(
+                                                    width:  20,
+                                                    height:  2,
+                                                    child: Container(
+                                                      decoration:  BoxDecoration (
+                                                        color: Color.fromRGBO(
+                                                            72, 71, 71,
+                                                            0.5686274509803921),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                " - ",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Arial',
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                            ]
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 300),
+                Text(
+                  "                                                     Total: P----",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'Arial',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: (){
+                  },
+                  child:
+                  Text("Procced Payment", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+                    fixedSize: Size(350, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 23.9),
+                BottomAppBar(
+                  color: Colors.blue,
+                  padding: const EdgeInsets
+                      .only(
+                    top: 10, bottom: 10,),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment
+                          .spaceEvenly,
+                      children: const [
+                        Icon(Icons.person_outline_outlined,
+                            size: 30,
+                            color: Colors
+                                .white),
+                        Icon(Icons
+                            .border_all_rounded,
+                            size: 30,
+                            color: Colors
+                                .white),
+                        Icon(
+                            Icons.shopping_cart,
+                            size: 30,
+                            color: Colors
+                                .white),
+                      ]
+                  ),
+                ),
+              ]
+          ),
+        ),
+      ),
+    );
+  }
+}

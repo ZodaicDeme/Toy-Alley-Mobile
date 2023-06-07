@@ -1,0 +1,316 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp()); }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+            backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+            title: const Column(
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: const [
+                            Image(
+                              image: AssetImage("images/Ellipse2.png"),
+                              height: 50,
+                              width: 50,
+                            ),
+                          ],
+                        ),
+
+                        Column(
+                          children: const [
+                            Text(
+                              "  Toy  \n  Alley.",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontFamily: 'Arial',
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]
+                  ),
+                ]
+            ),
+            actions: const [
+              Icon(Icons.menu, color:Colors.white),
+              const SizedBox(width: 15)
+            ]
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              const SizedBox(height: 25),
+
+              Container(
+                height: 620,
+                width: 350,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 20),
+                    const Text("Customer Service",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'Arial',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Positioned(
+                      left: 13,
+                      top: 120.9830474854,
+                      child:
+                      Align(
+                        child:
+                        SizedBox(
+                          width: 100,
+                          height: 2,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(
+                                  255, 178, 0, 1),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 26,),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Your Name",
+                            // like a placeholder
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontSize: 19,
+                            ),
+                            filled: true,
+                            fillColor: Color.fromRGBO(
+                                157, 156, 156, 0.5176470588235295),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Your Phone Number:",
+                            // like a placeholder
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontSize: 19,
+                            ),
+                            filled: true,
+                            fillColor: Color.fromRGBO(
+                                157, 156, 156, 0.5176470588235295),
+                          ),
+                          keyboardType: TextInputType.number,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Your Email",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontSize: 19,
+                            ),
+                            filled: true,
+                            fillColor: Color.fromRGBO(
+                                157, 156, 156, 0.5176470588235295),
+                          ),
+                          keyboardType: TextInputType.emailAddress,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Your Address",
+                            // like a placeholder
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontSize: 19,
+                            ),
+                            filled: true,
+                            fillColor: Color.fromRGBO(
+                                157, 156, 156, 0.5176470588235295),
+                          ),
+                          keyboardType: TextInputType.streetAddress,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Toy Name:",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontSize: 19,
+                            ),
+                            filled: true,
+                            fillColor: Color.fromRGBO(
+                                157, 156, 156, 0.5176470588235295),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        // to edit length of text field
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Tell us your concern about the toy",
+                            // like a placeholder
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontSize: 19,
+                            ),
+                            // puts color inside the text field
+                            filled: true,
+                            fillColor: Color.fromRGBO(
+                                157, 156, 156, 0.5176470588235295),
+                          ),
+                          maxLines: 5,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          alignment: Alignment.topLeft,
+                          child: Column(
+                            children: const [
+                              Text(" ",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'Arial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(
+                                    255, 178, 0, 1),
+                                fixedSize: const Size(299, 50),
+                                side: const BorderSide(
+                                  color: Color.fromRGBO(
+                                      255, 178, 0, 1),
+                                  width: 1,
+                                ),
+                              ),
+                              child:
+                              const Text("Submit",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            Text(" ",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontFamily: 'Arial',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 27.9),
+              BottomAppBar(
+                color: Colors.blue,
+                padding: const EdgeInsets
+                    .only(
+                  top: 10, bottom: 10,),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceEvenly,
+                    children: const [
+                      Icon(Icons.person_outline_outlined,
+                          size: 30,
+                          color: Colors
+                              .white),
+                      Icon(Icons
+                          .border_all_rounded,
+                          size: 30,
+                          color: Colors
+                              .white),
+                      Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors
+                              .white),
+                    ]
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

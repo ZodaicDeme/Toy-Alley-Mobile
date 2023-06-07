@@ -1,0 +1,385 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp()); }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+          title: const Column(
+              children: [
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: const [
+                          Image(
+                            image: AssetImage("images/Ellipse2.png"),
+                            height: 50,
+                            width: 50,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Text(
+                            "  Toy                                                       \n  Alley.                                                       ",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Arial',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ]
+                ),
+              ]
+          ),
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              Container(
+                width: 400,
+                height: 50,
+              ),
+              const SizedBox(height: 139.4,),
+              Container(
+                height: 533,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(254, 80, 69, 1),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 30),
+                    Column(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(top: 6 ),
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontFamily: 'Arial',
+                              fontWeight: FontWeight.bold,
+                              wordSpacing: 6,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 30),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "| Username",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                    Radius.circular(26)),
+                                borderSide: BorderSide(
+                                  color: Colors.blue,
+                                  width: 3,
+                                )
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              child: Icon(Icons.person_outline_outlined, size: 30,),
+                            ),
+                            prefixIconColor: Colors
+                                .black87,
+                          ),
+                          textAlign: TextAlign.left,
+                          maxLines: 1,
+                          keyboardType: TextInputType
+                              .emailAddress,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "| Password",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  72, 71, 71, 0.5686274509803921),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                    Radius.circular(26)),
+                                borderSide: BorderSide(
+                                  color: Colors.blue,
+                                  width: 3,
+                                )
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              child: Icon(Icons.lock_outline, size: 34,),
+                            ),
+                            prefixIconColor: Colors.black87,
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Icon(Icons.visibility_off_outlined, size: 30,),
+                            ),
+                            suffixIconColor: Colors
+                                .black87,
+                          ),
+                          obscureText: true,
+                          obscuringCharacter: "*",
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 54,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            children: const [
+                              Text(" ",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'Arial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            children: const [
+                              Text("Forgot Password?",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'Arial',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.topLeft,
+                          child: Column(
+                            children: const [
+                              Text(" ",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'Arial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromRGBO(255, 178, 0, 1),
+                                  fixedSize: const Size(140, 50),
+                                  side: const BorderSide(
+                                    color: Color(0xffffa500),
+                                    width: 1,
+                                  ),
+                                  // rounded button
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  )
+                              ),
+                              child:
+                              const Text("Login",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            Text(" ",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontFamily: 'Arial',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 35,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text("━━━━━━━━━━   or   ━━━━━━━━━━",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 30,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 40,
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey,
+                                    )
+                                  ]
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: AssetImage('images/faceboook.jpg'))
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(width: 60,),
+                        Column(
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 40,
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey,
+                                    )
+                                  ]
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: AssetImage('images/google.jpg'))
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(width: 60,),
+                        Column(
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 40,
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey,
+                                    )
+                                  ]
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: AssetImage('images/apple.jpg'))
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      )
+      ,
+    );
+  }
+}

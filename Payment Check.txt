@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+          leading: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          title: const Text ("         Payment",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontFamily: 'modern_sans_serif_7'
+              )
+          ),
+        ),
+        body: Center(
+          child: Column(
+              children: [
+                const SizedBox(height: 150),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: const [
+                        Image(
+                          image: AssetImage("images/Check.png"),
+                          height: 250,
+                          width: 250,
+                        ),
+                        Text(' Payment Successsful!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            fontFamily: 'Inter',
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 183.5),
+                const SizedBox(
+                  height: 50,
+                  width: 350,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: "                Continue Shopping          ",
+                      floatingLabelBehavior: FloatingLabelBehavior
+                          .never,
+                      labelStyle: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(30)
+                        ),
+                        borderSide: BorderSide(
+                          color: Color.fromRGBO(254, 80, 69, 1),
+                          width: 2,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(30)
+                        ),
+                      ),
+                      filled: true,
+                      fillColor: Color.fromRGBO(254, 80, 69, 1),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                BottomAppBar(
+                  color: Colors.blue,
+                  padding: const EdgeInsets
+                      .only(
+                    top: 10, bottom: 10,),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment
+                          .spaceEvenly,
+                      children: const [
+                        Icon(Icons.search,
+                            size: 30,
+                            color: Colors
+                                .white),
+                        Icon(Icons
+                            .border_all_rounded,
+                            size: 30,
+                            color: Colors
+                                .white),
+                        Icon(
+                            Icons.shopping_cart,
+                            size: 30,
+                            color: Colors
+                                .white),
+                      ]
+                  ),
+                ),
+              ]
+          ),
+        ),
+      ),
+    );
+  }
+}

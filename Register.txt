@@ -1,0 +1,343 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp()); }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+          title: const Column(
+              children: [
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: const [
+                          Image(
+                            image: AssetImage("images/Ellipse2.png"),
+                            height: 50,
+                            width: 50,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Text(
+                            "  Toy                                                       \n  Alley.                                                       ",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Arial',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ]
+                ),
+              ]
+          ),
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              Container(
+                width: 400,
+                height: 50,
+              ),
+              const SizedBox(height: 139.4),
+              Container(
+                height: 533.3,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(254, 80, 69, 1),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 30),
+                    Column(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(top: 6 ),
+                          child: Text(
+                            'Register',
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontFamily: 'Arial',
+                              fontWeight: FontWeight.bold,
+                              wordSpacing: 6,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 30),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "| Username",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  157, 156, 156, 0.5176470588235295),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                    Radius.circular(26)),
+                                borderSide: BorderSide(
+                                  color: Colors.blue,
+                                  width: 3,
+                                )
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              child: Icon(Icons.person_outline_outlined, size: 34,),
+                            ),
+                            prefixIconColor: Colors
+                                .black87,
+                          ),
+                          textAlign: TextAlign.left,
+                          maxLines: 1,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "| Email",
+                            hintStyle: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(
+                                  157, 156, 156, 0.5176470588235295),
+                              fontSize: 19,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.blue,
+                                width: 3,
+                              ),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              child: Icon(Icons.email_outlined, size: 34,),
+                            ),
+                            prefixIconColor: Colors
+                                .black87,
+                          ),
+                          textAlign: TextAlign.left,
+                          maxLines: 1,
+                          keyboardType: TextInputType
+                              .emailAddress,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "| Password",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  157, 156, 156, 0.5176470588235295),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.blue,
+                                width: 3,
+                              ),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              child: Icon(Icons.lock_outline, size: 34,),
+                            ),
+                            prefixIconColor: Colors.black87,
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Icon(Icons.visibility_off_outlined, size: 34,),
+                            ),
+                            suffixIconColor: Colors
+                                .black87,
+                          ),
+                          obscureText: true,
+                          obscuringCharacter: "*",
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const SizedBox(
+                        width: 300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "| Confirm Password",
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(
+                                  157, 156, 156, 0.5176470588235295),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 1,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(26)),
+                              borderSide: BorderSide(
+                                color: Colors.blue,
+                                width: 3,
+                              ),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              child: Icon(Icons.lock_outline, size: 34,),
+                            ),
+                            prefixIconColor: Colors.black87,
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Icon(Icons.visibility_off_outlined, size: 34,),
+                            ),
+                            suffixIconColor: Colors
+                                .black87,
+                          ),
+                          obscureText: true,
+                          obscuringCharacter: "*",
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            children: const [
+                              Text("      ",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'Arial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.topLeft,
+                          child: Column(
+                            children: const [
+                              Text("      ",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'Arial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+                                  fixedSize: const Size(140, 50),
+                                  side: const BorderSide(
+                                    color: Color(0xffffa500),
+                                    width: 1,
+                                  ),
+                                  // rounded button
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  )
+                              ),
+                              child:
+                              const Text("Register",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      )
+      ,
+    );
+  }
+}

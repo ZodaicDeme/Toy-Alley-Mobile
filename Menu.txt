@@ -1,0 +1,267 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: const Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+            backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+            title: const Column(
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: const [
+                            Image(
+                              image: AssetImage("images/Ellipse2.png"),
+                              height: 50,
+                              width: 50,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            Text(
+                              "  Toy  \n  Alley.",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontFamily: 'Arial',
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]
+                  ),
+                ]
+            ),
+            actions: const [
+              Icon(Icons.menu, color:Colors.white),
+              const SizedBox(width: 15)
+            ]
+        ),
+        body: Align(
+          alignment: Alignment.centerRight,
+          child: Column(
+            children: [
+              const SizedBox(height: 20,),
+              Container(
+                alignment: Alignment.topRight,
+                height: 516,
+                width: 300,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF277BC0),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    bottomLeft: Radius.circular(30.0),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 30,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                                elevation: 0,
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              child:
+                              const Text("Home",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        const Icon(Icons.home_filled, size: 28, color: Color.fromRGBO(255, 178, 0, 1),),
+                        const Text("      ",
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                                elevation: 0,
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+
+                              child:
+                              const Text("Services",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        const Icon(Icons.home_repair_service_sharp, size: 30, color: Color.fromRGBO(255, 178, 0, 1),),
+                        const Text("      ",
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                                elevation: 0,
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              child:
+                              const Text("About",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        const Icon(Icons.info, size: 28, color: Color.fromRGBO(255, 178, 0, 1),),
+                        const Text("      ",
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                                elevation: 0,
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              child:
+                              const Text("Settings",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        const Icon(Icons.settings, size: 28, color: Color.fromRGBO(255, 178, 0, 1),),
+                        const Text("      ",
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+
+                      ],
+                    ),
+                    const SizedBox(height: 10,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Column(
+                          children: [
+                            //button
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                                elevation: 0,
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              child:
+                              const Text("Logout",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        const Icon(Icons.logout_sharp, size: 28, color: Color.fromRGBO(255, 178, 0, 1),),
+                        const Text("      ",
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

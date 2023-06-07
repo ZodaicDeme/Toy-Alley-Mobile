@@ -1,0 +1,487 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+          leading: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          title: const Text ("          Payment",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontFamily: 'modern_sans_serif_7'
+              )
+          ),
+        ),
+        body: Center(
+          child:
+          Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      Text(
+                        'Deliver to                                                      ',
+                        style:
+                        TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      Container(
+                        height: 130,
+                        width: 352,
+                        decoration: const BoxDecoration(
+                          color: Color.fromRGBO(254, 80, 69, 1),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(24.0),
+                            topRight: Radius.circular(24.0),
+                            bottomLeft: Radius.circular(24.0),
+                            bottomRight: Radius.circular(24.0),
+                          ),
+                        ),
+                        child: Column(
+                            children: [
+                              Container(
+                                alignment: Alignment.center,
+                                child: const SizedBox(
+                                  height: 130,
+                                  width: 352,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: "",
+                                      hintStyle: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 19,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(26)),
+                                        borderSide: BorderSide(
+                                          color: Color.fromRGBO(254, 80, 69, 1),
+                                          width: 1,
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(26)),
+                                          borderSide: BorderSide(
+                                            color: Color.fromRGBO(254, 80, 69, 1),
+                                            width: 4,
+                                          )
+                                      ),
+                                      filled: true,
+                                      fillColor: Color.fromRGBO(254, 80, 69, 1),
+                                      prefixIcon: Padding(
+                                        padding: EdgeInsets.only(left: 10, right: 10),
+                                      ),
+                                    ),
+
+                                    textAlign: TextAlign.left,
+                                    maxLines: 4,
+                                    keyboardType: TextInputType.streetAddress,
+                                  ),
+                                ),
+                              ),
+                            ]
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      Text(
+                        'Pay With                                                      ',
+                        style:
+                        TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        height: 50,
+                        width: 352,
+                        decoration: const BoxDecoration(
+                          color: Color.fromRGBO(254, 80, 69, 1),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(24.0),
+                            topRight: Radius.circular(24.0),
+                            bottomLeft: Radius.circular(24.0),
+                            bottomRight: Radius.circular(24.0),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 18,),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment
+                                                .spaceEvenly,
+                                            children: [
+                                              Icon(Icons.circle, size: 15,color: Colors.white),
+                                              SizedBox(width: 10),
+                                              Column(
+                                                children: [
+                                                  Container(
+                                                    child:
+                                                    Column(
+                                                      children:  [
+                                                        Container(
+                                                          width: 35,
+                                                          height: 35,
+                                                          color: Color.fromRGBO(254, 80, 69, 1),
+                                                          child: Align(
+                                                            alignment: Alignment.centerLeft,
+                                                            child: CircleAvatar(
+                                                              backgroundImage:
+                                                              AssetImage(
+                                                                  "images/Paypal2.jpg"
+                                                              ),
+                                                              radius: 20,
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        const Text(
+                                          '  Paypal         ',
+                                          style:
+                                          TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        height: 50,
+                        width: 352,
+                        decoration: const BoxDecoration(
+                          color: Color.fromRGBO(254, 80, 69, 1),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(24.0),
+                            topRight: Radius.circular(24.0),
+                            bottomLeft: Radius.circular(24.0),
+                            bottomRight: Radius.circular(24.0),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 18,),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment
+                                                .spaceEvenly,
+                                            children: [
+                                              Icon(Icons.circle, size: 15,color: Colors.white),
+                                              SizedBox(width: 10),
+                                              Column(
+                                                children: [
+                                                  Container(
+                                                    child:
+                                                    Column(
+                                                      children:  [
+                                                        Container(
+                                                          width: 35,
+                                                          height: 35,
+                                                          color: Color.fromRGBO(254, 80, 69, 1),
+                                                          child: Align(
+                                                            alignment: Alignment.centerLeft,
+                                                            child: CircleAvatar(
+                                                              backgroundImage:
+                                                              AssetImage(
+                                                                  "images/Visal2.jpg"
+                                                              ),
+                                                              radius: 20,
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        const Text(
+                                          '  Card         ',
+                                          style:
+                                          TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        height: 50,
+                        width: 352,
+                        decoration: const BoxDecoration(
+                          color: Color.fromRGBO(254, 80, 69, 1),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(24.0),
+                            topRight: Radius.circular(24.0),
+                            bottomLeft: Radius.circular(24.0),
+                            bottomRight: Radius.circular(24.0),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 18,),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment
+                                                .spaceEvenly,
+                                            children: [
+                                              Icon(Icons.circle, size: 15,color: Colors.white),
+                                              SizedBox(width: 5),
+                                              Column(
+                                                children: [
+                                                  Container(
+                                                    child:
+                                                    Column(
+                                                      children: const [
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        const Text(
+                                          ' Cash on Delivery         ',
+                                          style:
+                                          TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      Text(
+                        'Order Summary                                          ',
+                        style:
+                        TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      Container(
+                        height: 154,
+                        width: 352,
+                        decoration: const BoxDecoration(
+                          color: Color.fromRGBO(254, 80, 69, 1),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30.0),
+                            topRight: Radius.circular(30.0),
+                            bottomLeft: Radius.circular(30.0),
+                            bottomRight: Radius.circular(30.0),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 10,),
+                            const Text('',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                            const SizedBox(height: 8,),
+                            Row(
+                              children: const [
+                                Text("",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text("",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Positioned(
+                                left: 13,
+                                top: 120.9830474854,
+                                child:
+                                Align(
+                                  child:
+                                  SizedBox(
+                                    width: 290,
+                                    height: 2,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(
+                                            255, 255, 255, 1),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                            ),
+                            const SizedBox(height: 5),
+                            Row(
+                              children: const [
+                                Text("     Subtotal                             ",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Arial',
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 55),
+                      ElevatedButton(
+                        onPressed: (){
+                        },
+                        child: Text("Pay now", style: TextStyle(
+                          fontSize: 23,
+                        ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+                          fixedSize: Size(350, 50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 25),
+              BottomAppBar(
+                color: Colors.blue,
+                padding: const EdgeInsets
+                    .only(
+                  top: 10, bottom: 10,),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceEvenly,
+                    children: const [
+                      Icon(Icons.person_outline_outlined,
+                          size: 30,
+                          color: Colors
+                              .white),
+                      Icon(Icons
+                          .border_all_rounded,
+                          size: 30,
+                          color: Colors
+                              .white),
+                      Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors
+                              .white),
+                    ]
+                ),
+              ),
+            ],
+          ),
+        ),
+
+      ),
+    );
+  }
+}

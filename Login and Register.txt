@@ -1,0 +1,128 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color.fromRGBO(255, 178, 0, 1),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+          title: const Column(
+              children: [
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: const [
+                          Image(
+                            image: AssetImage("images/Ellipse2.png"),
+                            height: 50,
+                            width: 50,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Text(
+                            "  Toy  \n  Alley.",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Arial',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ]
+                ),
+              ]
+          ),
+        ),
+        body: Center(
+          child: Column(
+              children: [
+                const SizedBox(height: 50),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: const [
+                        Image(
+                          image: AssetImage("images/Ellipse2.png"),
+                          height: 250,
+                          width: 250,
+                        ),
+                        Text(
+                          "  Toy Alley.",
+                          style: TextStyle(
+                            fontSize: 35,
+                            fontFamily: 'Arial',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 60),
+                ElevatedButton(
+                  onPressed: (){
+                  },
+                  child:
+                  Text("Login", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+                    fixedSize: Size(250, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  "or",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'Arial',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: (){
+                  },
+                  child:
+                  Text("Register", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(254, 80, 69, 1),
+                    fixedSize: Size(250, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                ),
+              ]
+          ),
+        ),
+      ),
+    );
+  }
+}
